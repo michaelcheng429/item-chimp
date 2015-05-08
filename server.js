@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var reactify = require('reactify');
 var nunjucks = require('nunjucks');
-var authRouter = require('./server/auth-routes');
+// var authRouter = require('./server/auth-routes');
 var OperationHelper = require('apac').OperationHelper;
 var request = require('request');
 
@@ -14,9 +14,9 @@ nunjucks.configure('server/templates/views', {
   express: app
 });
 
-var authRouter = express.Router();
-app.use('/auth', authRouter);
-require('./server/auth-routes')(authRouter);
+// var authRouter = express.Router();
+// app.use('/auth', authRouter);
+// require('./server/auth-routes')(authRouter);
 
 app.get('/', function(req, res) {
   res.render('index.html');
